@@ -1,0 +1,342 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+}
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* start header  */
+  .header{
+    padding: 10px 0;
+    background-color: #f0f0f0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+
+  }
+  .header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header a{
+    position: relative;
+    text-decoration: none;
+    color: #3a6cf4;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .header .logo a{
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .header .links a{
+    padding: 10px 30px;
+  }
+  @media (max-width: 767px) {
+    .header .links a{
+      padding: 10px 5px;
+      font-size: 15px;
+    }
+  }
+  
+  .header .links a:hover{
+    color: #ff8c00		;
+    background-color: white;
+  }
+  .header .links a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background-color: #ff8c00;
+    transition: 0.3s;
+  }
+  .header .links a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 0;
+    background-color: #ff8c00	;
+    transition: 0.3s;
+  }
+  .header .links a:hover::before{
+    height: 100%;
+  }
+.header .links a:hover::after{
+    height: 100%;
+}
+/* start landing  */
+.landing{
+  padding: 200px 200px 100px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/land.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+    .landing{
+      padding: 220px 20px 50px;
+      text-align: center;
+    }
+}
+.landing h2{
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.landing h2 span{
+  display: inline-block;
+  color: #ff8c00;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.landing h3{
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.landing .btn{
+  color: white;
+  background-color: #ff8c00;
+  width: fit-content;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.604);
+  transition: 0.5s;
+}
+@media (max-width: 767px) {
+  .landing .btn{
+   margin: 20px auto 80px;
+    text-align: center;
+  }
+}
+.landing .btn:hover{
+  background-color: #ff6700 ;
+  transform: scale(1.1);
+}
+.landing .social i{
+  color: white;
+  font-size: 30px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* start services  */
+.services{
+  padding: 100px 0;
+}
+.title{
+  text-align: center;
+  color: #3a6cf4;
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 70px;
+}
+.services .container{
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .services .container{
+    flex-direction: column;
+  }
+  
+}
+.services .container .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px  rgba(0, 0, 0, 0.45);
+  transition: 0.3s;
+  padding: 25px;
+}
+@media (min-width: 767px) {
+  .services .container .box{
+    width: 400px;
+  }
+}
+.services .box:hover{
+  transform: scale(1.1);
+}
+.services .box i{
+  font-size: 70px;
+  margin: 30px 0;
+  color: #3a6cf4;
+}
+.services .box h3{
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+.services .box p{
+  margin-bottom: 20px;
+  color: #777;
+}
+/* start projects  */
+.projects{
+  padding: 100px 0;
+  background-color: #000016  ;
+}
+.projects .container{
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+@media (max-width:767px) {
+    .projects .container{
+      flex-direction: column;
+    }
+}
+.projects .box{
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.projects .box:hover{
+  transform: scale(1.1);
+}
+.projects .box:hover img{
+  opacity: 0.9;
+}
+
+.projects .box .info{
+  padding: 30px;
+  text-align: center;
+}
+.projects .info h3{
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px auto 40px;
+}
+.projects .image{
+  max-width: 100%;
+}
+.projects img{
+  height: 200px;
+  width: 100%;
+}
+.projects .info a{
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  padding: 15px 10px;
+  background-color: #3a6cf4;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px  rgba(0, 0, 0, 0.45);
+}
+/* start contact  */
+.contact{
+  padding: 100px 0;
+}
+.contact .container{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .contact .container{
+    flex-direction: column;
+  }
+  
+}
+.contact .container .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px  rgba(0, 0, 0, 0.45);
+  transition: 0.3s;
+  padding: 25px;
+}
+@media (min-width: 767px) {
+  .contact .container .box{
+    width: 400px;
+  }
+}
+.contact .box:hover{
+  transform: scale(1.1);
+}
+.contact .box i{
+  font-size: 70px;
+  margin: 30px 0;
+  color: #3a6cf4;
+}
+.contact .box h3{
+  margin: 20px 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+.contact .box p{
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #777;
+}
+/* start footer  */
+.footer{
+  background-color: #000;
+  text-align: center;
+  padding: 20px ;
+}
+.footer p{
+  font-size: 20px;
+  color: white;
+}
+.footer span{
+  color: #3a6cf4;
+  font-weight: bold;
+}
